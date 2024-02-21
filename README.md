@@ -1,6 +1,6 @@
-# CLTV
+# Optimizing Customer Acquisition and Retention with CLTV Prediction
 
-- The main goal of this project is to forecast the Customer Lifetime Value (CLTV) using user and policy data.
+- The main goal of this project is to forecast the <u>Customer Lifetime Value</u> (CLTV) using user and policy data.
 
 - CLTV: a metric that indicates how much revenue a company can anticipate from a customer over their entire relationship.
     - It aids businesses in understanding the long-term worth of their customers and guides decisions regarding customer acquisition and retention investments.
