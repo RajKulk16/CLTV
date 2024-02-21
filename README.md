@@ -59,3 +59,7 @@
 - Through EDA and model development, it is apparent that "PLATINUM" policy is favored by a majority of the population regardless of the area, be it rural or urban. So, major focus can be given there for retention.
 
 - Despite the poor performance of the vanilla Random Forest Regressor, the tuned model exhibited significant improvement compared to its predecessor.
+
+- The likely cause for the low metrics could be attributed to the "quality" of the data (DATA QUALITY). Even with thorough preprocessing and engineering, if the data quality is poor, it is expected to yield unfavorable results.
+
+    - Upon deeper investigation into the data source, it was discovered that all attempts at modeling this dataset resulted in similar metrics, underscoring the data's quality issues.
