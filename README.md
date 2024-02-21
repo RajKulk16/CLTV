@@ -1,61 +1,61 @@
 # CLTV
 
-- The primary objective of this project is to predict the Customer Lifetime Value (CLTV) based on the user and policy data.
+- The main goal of this project is to forecast the Customer Lifetime Value (CLTV) using user and policy data.
 
-- CLTV : measure that tells businesses how much money they can expect to earn from a customer throughout their entire relationship.
-    - It helps companies understand the long-term value of their customers and make decisions about how much to invest in acquiring and retaining them.
-    - Essentially, CLTV helps businesses figure out how valuable each customer is over time.
+- CLTV: a metric that indicates how much revenue a company can anticipate from a customer over their entire relationship.
+    - It aids businesses in understanding the long-term worth of their customers and guides decisions regarding customer acquisition and retention investments.
+    - Essentially, CLTV assists businesses in determining the value of each customer over time.
 
 ## Dataset Overview
 
-1. **Description, Features and Attributes:**
-    - This is a sample dataset of a company holding information of customers and policies such as the highest qualification of the user, total income earned by a customer in a year, employee status, policy opted by the user, type of policy and so on and the target variable indicating the total cltv.
-    - Some of the features are as follows - 
-        - id-Unique identifier of a customer
-        - gender-Gender of the customer
-        - area-Area of the customer
-        - qualification-Highest Qualification of the customer
-        - claim_amount-Total Amount Claimed by the customer (in rupees)
-        - vintage-No. of years since the first policy date
-        - num_policies-Total no. of policies issued by the customer
+1. **Description, Features, and Attributes:**
+    - This dataset contains information on customers and policies, such as the customers' highest qualification, annual income, employment status, chosen policy, policy type, and the target variable indicating the total CLTV.
+    - Some key features include:
+        - id: Unique customer identifier
+        - gender: Customer's gender
+        - area: Customer's location
+        - qualification: Customer's highest qualification
+        - claim_amount: Total amount claimed by the customer (in rupees)
+        - vintage: Number of years since the first policy date
+        - num_policies: Total number of policies issued to the customer
 
 ## Code Related
 
-- Used conda environment and 3.9 python version (gpu enabled).
+- Utilized a conda environment with Python version 3.9 (GPU and CUDA enabled).
 
-1. For running in the local machine - 
-    - git clone <repo_name>
-    - conda activate venv
+1. For local setup:
+    - Clone the repository: `<repo_name>`
+    - Activate the environment: `conda activate venv`
 
-2. Libraries (might) have to be installed - 
+2. "Might require re-installation" Libraries:
     - tensorflow
-    - tensorflow-diretml-plugin (gpu-based)
+    - tensorflow-diretml-plugin (GPU-based)
     - fast_ml
 
-## Flow of the Project
+## Project Flow
 
-1. **Data Analysis, Preprocessing, Engineering:**
-    - Addressed duplicates, missing values, null values, etc., ensuring its impact on business analysis.
-    - Conducted in-depth analysis, including ratio-distribution of gender for diversification of product offerings, potential reasons for higher average claim in the urban areas and many more. 
-    - Conducted statistical tests (1-way ANOVA test) to compare the mean CLTV across different categorical variables to observe the degree to which CLTV will vary across these columns. 
-    - Performed logical data cleaning and transformation.
+1. **Data Analysis, Preprocessing, and Engineering:**
+    - Handled duplicates, missing values, null values, etc., to ensure minimal impact on business analysis.
+    - Conducted thorough analysis, including exploring gender ratios to diversify product offerings, investigating factors contributing to higher average claims in urban areas, etc.
+    - Utilized statistical tests (1-way ANOVA test) to compare mean CLTV across different categorical variables and understand CLTV variation.
+    - Implemented logical data cleaning and transformation techniques.
 
-2. **Models used for prediction:**
+2. **Models Employed for Prediction:**
     - Linear Regression (complemented with Elastic Net with equal regularization ratio)
     - Random Forest Regressor (complemented with LightGBM)
         - vanilla
         - hyperparameter tuned
-    - Deep Net
+    - Deep Neural Network
         - vanilla
         - hyperparameter tuned
 
 ## Observations
 
-1. None of the models performed very well, with Random Forest Regressor slightly performing better than others. 
-2. Emphasis was placed on R2 and Adjusted R2 score for clarity on metrics' impact on the business module. 
+1. None of the models exhibited exceptional performance, with the Random Forest Regressor slightly outperforming the others.
+2. R2 and Adjusted-R2 scores were prioritized to gauge the metrics' influence on the business module.
 
-## Result
+## Results
 
-- Based on EDA and model development, it is evident that most of the population choose "PLATINUM" policy irrespective of the area - rural, urban.
+- Through EDA and model development, it is apparent that "PLATINUM" policy is favored by a majority of the population regardless of the area, be it rural or urban. So, major focus can be given there for retention.
 
-- Despite the extremely poor performance of vanilla Random Forest Regressor, the tuned model performed much better when compared to its predecessor.
+- Despite the poor performance of the vanilla Random Forest Regressor, the tuned model exhibited significant improvement compared to its predecessor.
